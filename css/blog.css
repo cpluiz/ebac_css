@@ -60,10 +60,21 @@
     color: var(--primary-color);
 }
 
+#article-area article figure{
+    position: relative;
+}
+
 #article-area article img{
     display: block;
     max-width: 100%;
     margin-bottom: 0.2rem;
+}
+
+#article-area article h3{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #article-area article span{
@@ -80,6 +91,10 @@
     padding-bottom: 0.7rem;
     letter-spacing: 2px;
     line-height: 1.4rem;
+}
+
+#article-area article .readmore{
+    display: none;
 }
 
 #article-area article header:first-letter{

@@ -117,21 +117,33 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         window.categories = ['Design','Audiovisual','Marketing', 'Programação & Data', 'Games'];
+        window.getRandomInt = function(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min;
+        }
         window.articleArea = document.getElementById('article-area');
         let insertPost = function(mockupTitle, mockupText, index){
           let articleTarget = document.createElement('a');
           articleTarget.setAttribute('href', 'https://ebaconline.com.br/blog');
           articleTarget.setAttribute('target', '_blank');
           let article = document.createElement('article');
+          let article_fig = document.createElement('figure');
           let article_img = document.createElement('img');
           article_img.setAttribute('src', 'https://picsum.photos/360/234/?random='+index);
+          let article_tag = document.createElement('h3');
+          article_tag.innerText = window.categories[getRandomInt(0,window.categories.length)];
+          article_fig.append(article_img, article_tag);
           let article_date = document.createElement('span');
           article_date.innerText = "01/09/2021";
           let article_title = document.createElement('header');
           article_title.innerText = mockupTitle;
           let article_preview = document.createElement('p');
           article_preview.innerText = mockupText.trim();
-          article.append(article_img, article_date, article_title, article_preview);
+          let article_readmore = document.createElement('span');
+          article_readmore.setAttribute('class', 'readmore');
+          article_readmore.innerText = "Leia mais";
+          article.append(article_fig, article_date, article_title, article_preview, article_readmore);
           articleTarget.appendChild(article);
           articleArea.appendChild(articleTarget);
         }
@@ -162,11 +174,6 @@
           for(let i = 0; i < +quantity; i++) {
             GeneratePost(i);
           }
-        }
-        function getRandomInt(min, max) {
-          min = Math.ceil(min);
-          max = Math.floor(max);
-          return Math.floor(Math.random() * (max - min)) + min;
         }
         PopulatePosts(30);
       });
