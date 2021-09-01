@@ -24,8 +24,7 @@
 
 /* TODO remover margem extra do último item */
 .page-header nav .brand{
-    justify-self: flex-start;
-    margin-right: auto;
+
 }
 
 .page-header nav .has_child{
@@ -111,9 +110,7 @@ footer{
 }
 
 footer .footer-box{
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
+
 }
 
 footer .footer-box section:first-child{
