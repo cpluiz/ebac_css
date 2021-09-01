@@ -148,6 +148,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         window.categories = ['Design','Audiovisual','Marketing', 'Programação & Data', 'Games'];
+        window.category_tag = ['design', 'audiovisual', 'marketing', 'programacao_data', 'games'];
         window.getRandomInt = function(min, max) {
           min = Math.ceil(min);
           max = Math.floor(max);
@@ -163,7 +164,9 @@
           let article_img = document.createElement('img');
           article_img.setAttribute('src', 'https://picsum.photos/360/234/?random='+index);
           let article_tag = document.createElement('h3');
-          article_tag.innerText = window.categories[getRandomInt(0,window.categories.length)];
+          let i = getRandomInt(0,window.categories.length);
+          article_tag.innerText = window.categories[i];
+          article_tag.setAttribute('class', window.category_tag[i])
           article_fig.append(article_img, article_tag);
           let article_date = document.createElement('span');
           article_date.innerText = "01/09/2021";
