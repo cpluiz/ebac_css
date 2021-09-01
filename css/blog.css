@@ -15,10 +15,7 @@
 }
 
 .page-header nav{
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    align-items: center;
+    
 }
 
 .page-header nav a{
@@ -29,6 +26,14 @@
 .page-header nav .brand{
     justify-self: flex-start;
     margin-right: auto;
+}
+
+.page-header nav .has_child{
+    position: relative;
+}
+
+.page-header nav .has_child .child_nav{
+    display: none;
 }
 
 .brand svg{
@@ -45,9 +50,7 @@
 .page-header nav .brand svg { fill: black; }
 
 #article-area{
-    display: grid;
-    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
-    padding: 1.5rem 0;
+    
 }
 
 #article-area a{
@@ -87,7 +90,7 @@
 
 #article-area article header{
     font-weight: bold;
-    color: var(--title-color);
+    
     padding-bottom: 0.7rem;
     letter-spacing: 2px;
     line-height: 1.4rem;
@@ -114,18 +117,15 @@ footer .footer-box{
 }
 
 footer .footer-box section:first-child{
-    justify-self: flex-start;
-    margin-right: auto;
+    
 }
 
 footer .footer-box .nav-container{
-    display: flex;
-    flex-flow: row;
+    
 }
 
 footer .footer-box .nav-container nav{
-    display: flex;
-    flex-flow: column;
+    
     padding: 0 1.2rem;
     max-width: 100px;
 }
