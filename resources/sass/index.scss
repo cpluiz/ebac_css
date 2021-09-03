@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'fonts';
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap';
 
 *{
     --title-color:$title-color;
