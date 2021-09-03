@@ -1,0 +1,61 @@
+footer{
+    background-color: black;
+    color: white;
+    padding: 3rem 0;
+}
+
+footer .footer-box{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    padding: 1rem 0;
+}
+
+footer .footer-box section:first-child{
+    justify-self: flex-start;
+    margin-right: auto;
+}
+
+footer .footer-box .nav-container{
+    display: flex;
+    flex-flow: row;
+}
+
+footer .footer-box .nav-container nav{
+    display: flex;
+    flex-flow: column;
+    padding: 0 1.2rem;
+    max-width: 100px;
+}
+
+footer .footer-box .nav-container nav header{
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    margin: 0.3rem 0;
+}
+
+footer .brand svg { 
+    fill: white;
+    width: 240px;
+}
+
+footer .contacts{
+    display: flex;
+    flex-flow: row;
+    border-top: 1px solid white;
+    padding: 0.3rem 0;
+}
+
+footer .contacts a{
+    margin: 1rem 0.5rem;
+}
+
+footer .social{
+    align-self: flex-end;
+    margin-left: auto;
+}

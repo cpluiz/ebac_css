@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100,400,600&display=swap);
+* {
+  --title-color:$title-color;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand svg {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  aspect-ratio: 2/1;
+}
+
+.page-header {
+  padding: 0.6rem 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: "Roboto", sans-serif;
+}
+.page-header nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+}
+.page-header nav a, .page-header nav .has_child {
+  margin: 0 0.5rem;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+.page-header nav a:hover, .page-header nav .has_child:hover {
+  color: #d26132;
+}
+.page-header nav a, .page-header nav .has_child {
+  text-decoration: none;
+}
+.page-header nav a[href^="tel:"] {
+  font-size: 1.2rem;
+  padding: 0 0.3rem;
+}
+.page-header nav *.active, .page-header nav .login {
+  color: #d26132;
+  font-weight: bold;
+}
+.page-header nav .login {
+  border: 1px solid #d26132;
+  padding: 0.85rem 2rem;
+  border-radius: 10rem;
+  font-size: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+.page-header nav .login:hover {
+  color: white;
+  background-color: #d26132;
+}
+.page-header nav .brand {
+  align-self: flex-start;
+  margin-right: auto;
+}
+.page-header nav .brand svg {
+  width: 138px;
+  fill: black;
+}
+.page-header nav .has_child {
+  position: relative;
+  cursor: pointer;
+}
+.page-header nav .has_child .child_nav {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 2rem;
+  left: -1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 100;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.page-header nav .has_child .child_nav a {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.page-header nav .has_child:hover .child_nav, .page-header nav .has_child:focus .child_nav {
+  max-height: 1000px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#article-area {
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  padding: 3rem 0rem;
+}
+#article-area a {
+  text-decoration: none;
+}
+#article-area a article {
+  overflow: hidden;
+  padding: 1.3rem 1rem;
+  color: #777777;
+  transition: all 0.5s ease-out;
+}
+#article-area a article figure {
+  position: relative;
+  overflow: hidden;
+}
+#article-area a article figure img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 0.2rem;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  filter: GRAYSCALE();
+}
+#article-area a article figure h3 {
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  padding: 0.3rem 0.5rem;
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+}
+#article-area a article figure h3.design {
+  background-color: #37ddb3;
+  color: #ffffff;
+}
+#article-area a article figure h3.audiovisual {
+  background-color: black;
+  color: #ffffff;
+}
+#article-area a article figure h3.marketing {
+  background-color: black;
+  color: #ffffff;
+}
+#article-area a article figure h3.programacao_data {
+  background-color: black;
+  color: #ffffff;
+}
+#article-area a article figure h3.games {
+  background-color: black;
+  color: #ffffff;
+}
+#article-area a article span {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  padding: 0.5rem 0;
+}
+#article-area a article header {
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: 0.7rem;
+  letter-spacing: 2px;
+  line-height: 1.4rem;
+}
+#article-area a article header:first-letter {
+  text-transform: uppercase;
+}
+#article-area a article .readmore {
+  display: none;
+}
+#article-area a p {
+  line-height: 1.2rem;
+}
+#article-area a:hover article, #article-area a:focus article {
+  box-shadow: 2px 8px 13px 2px #000000;
+  transform: translateY(-1.5rem);
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  z-index: 50;
+  background-color: white;
+}
+#article-area a:hover article figure img, #article-area a:focus article figure img {
+  filter: none;
+}
+#article-area a:hover article figure h3, #article-area a:focus article figure h3 {
+  transform: translateX(0);
+}
+#article-area a:hover article .readmore, #article-area a:focus article .readmore {
+  display: block;
+  line-height: 1.5rem;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 3rem 0;
+}
+
+footer .footer-box {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+footer .footer-box section:first-child {
+  justify-self: flex-start;
+  margin-right: auto;
+}
+
+footer .footer-box .nav-container {
+  display: flex;
+  flex-flow: row;
+}
+
+footer .footer-box .nav-container nav {
+  display: flex;
+  flex-flow: column;
+  padding: 0 1.2rem;
+  max-width: 100px;
+}
+
+footer .footer-box .nav-container nav header {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+footer .brand svg {
+  fill: white;
+  width: 240px;
+}
+
+footer .contacts {
+  display: flex;
+  flex-flow: row;
+  border-top: 1px solid white;
+  padding: 0.3rem 0;
+}
+
+footer .contacts a {
+  margin: 1rem 0.5rem;
+}
+
+footer .social {
+  align-self: flex-end;
+  margin-left: auto;
+}

@@ -1,0 +1,91 @@
+.page-header{
+    padding: 0.6rem 0;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 20%);
+    font-family: $font-roboto;
+    
+    nav{
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        align-items: center;
+        text-transform: uppercase;
+
+        a, .has_child{ 
+            margin: 0 0.5rem; 
+            color: black;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                color: $login-color;
+            }
+        }
+
+        a, .has_child{
+            text-decoration: none;
+        }
+
+        a[href^="tel:"]{
+            font-size: 1.2rem;
+            padding: 0 0.3rem;
+        }
+
+        *.active, .login{
+            color: $login-color;
+            font-weight: bold;
+        }
+
+        .login{
+            border: 1px solid $login-color;
+            padding: 0.85rem 2rem;
+            border-radius: 10rem;
+            font-size: 0.8rem;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                color: white;
+                background-color: $login-color;
+            }
+        }
+
+        .brand{
+            align-self: flex-start;
+            margin-right: auto;
+            svg{
+                width: 138px;
+                fill: black;
+            }
+        }
+
+        .has_child{
+            position: relative;
+            cursor: pointer;
+
+            .child_nav{
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 2rem;
+                left: -1rem;
+                padding: 0.5rem 1rem;
+                background-color: rgba(255,255,255,0.7);
+                max-height: 0;
+                overflow: hidden;
+                transition: all .5s ease-in;
+                z-index: 100;
+                border-bottom-right-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+
+                a{
+                    margin: 0;
+                    padding: 0.5rem 0;
+                }
+            }
+
+            &:hover, &:focus{
+                .child_nav{
+                    max-height: 1000px;
+                    height: fit-content;
+                }
+            }
+        }
+    }
+}

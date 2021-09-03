@@ -1,3 +1,22 @@
-body{
-    background-color: black;
+@import 'variables';
+@import 'fonts';
+
+*{
+    --title-color:$title-color;
+    font-family: $primary-font;
 }
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand svg{
+    display: block;
+    height: fit-content;
+    aspect-ratio: 2/1;
+}
+
+@import 'header';
+@import 'article-list';
+@import 'footer';
